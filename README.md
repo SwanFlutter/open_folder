@@ -6,6 +6,9 @@ Here is the English version of your `open_folder` plugin documentation:
 
 A Flutter plugin to open folders on Android, iOS, macOS, Windows, and Linux platforms.
 
+![20251025_234504](https://github.com/user-attachments/assets/16cde4ff-9ebd-496d-b04f-b1047a467aaa)
+
+
 ---
 
 ## Features
