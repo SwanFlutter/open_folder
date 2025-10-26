@@ -1,15 +1,14 @@
-
 import 'open_folder_platform_interface.dart';
 import 'src/tools/open_result.dart';
 
 /// Main class for opening folders across different platforms
 class OpenFolder {
   /// Opens a folder at the specified path
-  /// 
+  ///
   /// [folderPath] - The absolute path to the folder to open
-  /// 
+  ///
   /// Returns [OpenResult] indicating whether the operation was successful
-  /// 
+  ///
   /// Example:
   /// ```dart
   /// final result = await OpenFolder.openFolder('/path/to/folder');
