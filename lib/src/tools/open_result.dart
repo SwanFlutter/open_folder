@@ -56,6 +56,27 @@ class OpenResult {
     }
   }
 
+  /// Returns true if the operation was successful
+  bool get isSuccess => type == ResultType.done;
+
+  /// Returns true if the operation failed with an error
+  bool get isError => type == ResultType.error || 
+                      type == ResultType.fileNotFound || 
+                      type == ResultType.noAppToOpen || 
+                      type == ResultType.permissionDenied;
+
+  /// Returns true if the operation was cancelled
+  bool get isCancelled => false; // Currently not used, but kept for API compatibility
+
+  /// Returns true if file or folder was not found
+  bool get isFileNotFound => type == ResultType.fileNotFound;
+
+  /// Returns true if no application is available to handle the operation
+  bool get isNoAppToOpen => type == ResultType.noAppToOpen;
+
+  /// Returns true if permission was denied
+  bool get isPermissionDenied => type == ResultType.permissionDenied;
+
   @override
   String toString() {
     return 'OpenResult(type: $type, message: $message)';

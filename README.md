@@ -22,7 +22,7 @@ A Flutter plugin to open folders on Android, iOS, macOS, Windows, and Linux plat
 
 ```yaml
 dependencies:
-  open_folder: ^0.0.1
+  open_folder: ^0.0.2
 ```
 
 ### 2. Install the package

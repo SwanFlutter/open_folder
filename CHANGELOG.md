@@ -2,4 +2,6 @@
 
 * Initial release of the open_folder plugin.
 
+## 0.0.2
 
+* Fix Bug: Handle null folder path gracefully.

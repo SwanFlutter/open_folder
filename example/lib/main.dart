@@ -79,6 +79,15 @@ class _MyAppState extends State<MyApp> {
 
     try {
       final result = await OpenFolder.openFolder(folderPath);
+      if (result.isSuccess) {
+        setState(() {
+          _result = 'Folder opened successfully';
+        });
+      } else {
+        setState(() {
+          _result = 'Error: ${result.message}';
+        });
+      }
       setState(() {
         _result = 'Result: ${result.type}\nMessage: ${result.message}';
       });
