@@ -2,7 +2,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:open_folder/open_folder.dart';
 import 'package:open_folder/open_folder_method_channel.dart';
 import 'package:open_folder/open_folder_platform_interface.dart';
-import 'package:open_folder/src/tools/open_result.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 class MockOpenFolderPlatform

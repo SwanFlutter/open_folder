@@ -80,7 +80,7 @@ class _MyAppState extends State<MyApp> {
     try {
       final result = await OpenFolder.openFolder(folderPath);
       setState(() {
-        print("result: ${result.isSuccess}");
+        debugPrint("result: ${result.isSuccess}");
         if (result.isSuccess) {
           _result = '✅ Folder opened successfully\nPath: $folderPath';
         } else if (result.isFileNotFound) {
