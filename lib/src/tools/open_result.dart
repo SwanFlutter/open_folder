@@ -60,13 +60,15 @@ class OpenResult {
   bool get isSuccess => type == ResultType.done;
 
   /// Returns true if the operation failed with an error
-  bool get isError => type == ResultType.error || 
-                      type == ResultType.fileNotFound || 
-                      type == ResultType.noAppToOpen || 
-                      type == ResultType.permissionDenied;
+  bool get isError =>
+      type == ResultType.error ||
+      type == ResultType.fileNotFound ||
+      type == ResultType.noAppToOpen ||
+      type == ResultType.permissionDenied;
 
   /// Returns true if the operation was cancelled
-  bool get isCancelled => false; // Currently not used, but kept for API compatibility
+  bool get isCancelled =>
+      false; // Currently not used, but kept for API compatibility
 
   /// Returns true if file or folder was not found
   bool get isFileNotFound => type == ResultType.fileNotFound;
