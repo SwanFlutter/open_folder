@@ -79,21 +79,24 @@ class _MyAppState extends State<MyApp> {
 
     try {
       final result = await OpenFolder.openFolder(folderPath);
-      if (result.isSuccess) {
-        setState(() {
-          _result = 'Folder opened successfully';
-        });
-      } else {
-        setState(() {
-          _result = 'Error: ${result.message}';
-        });
-      }
       setState(() {
-        _result = 'Result: ${result.type}\nMessage: ${result.message}';
+        print("result: ${result.isSuccess}");
+        if (result.isSuccess) {
+          _result = '✅ Folder opened successfully\nPath: $folderPath';
+        } else if (result.isFileNotFound) {
+          _result =
+              '❌ Folder not found\nPath: $folderPath\nMessage: ${result.message}';
+        } else if (result.isPermissionDenied) {
+          _result =
+              '❌ Permission denied\nPath: $folderPath\nMessage: ${result.message}';
+        } else {
+          _result =
+              '❌ Error: ${result.message}\nPath: $folderPath\nType: ${result.type}';
+        }
       });
     } catch (e) {
       setState(() {
-        _result = 'Error: $e';
+        _result = '❌ Exception occurred: $e';
       });
     }
   }

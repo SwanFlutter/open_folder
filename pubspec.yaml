@@ -1,6 +1,6 @@
 name: open_folder
 description: "A Flutter plugin to open folders on Android, iOS, macOS, Windows, and Linux platforms."
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/SwanFlutter/open_folder
 repository: https://github.com/SwanFlutter/open_folder
 issue_tracker: https://github.com/SwanFlutter/open_folder/issues
