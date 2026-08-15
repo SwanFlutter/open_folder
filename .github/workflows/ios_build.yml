@@ -37,3 +37,4 @@ jobs:
       - name: Build iOS example app (no code signing)
         working-directory: example
         run: flutter build ios --no-codesign --debug
+        
