@@ -108,7 +108,7 @@ public class OpenFolderPlugin: NSObject, FlutterPlugin {
           "type": "error",
           "message": "Cannot display folder information on iOS"
         ]
-        result(jsonString(from: errorResult))
+        result(self.jsonString(from: errorResult))
       }
     }
   }
